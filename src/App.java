@@ -9,11 +9,14 @@ public class App {
 
         // fazer uma conexão HTTP e buscar os top 250 conteudos
         // funcionará com qq api, desde que se mude o "title" e o "image" e a qtd do "for".
-        String url = "https://alura-filmes.herokuapp.com/conteudos";
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoDoImdb();
+        //String url = "https://alura-filmes.herokuapp.com/conteudos";
+        //ExtratorDeConteudo extrator = new ExtratorDeConteudoDoImdb();
 
         //String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD.json";
         //ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+
+        String url = "http://localhost:8080/linguagens";
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoDoImdb();
 
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
